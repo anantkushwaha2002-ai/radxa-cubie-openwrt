@@ -47,9 +47,11 @@ An optimized, clean, and fully localized OpenWrt firmware image for the **Radxa 
 
 ## 📥 Download Firmware
 
-The ready-to-flash `.img` file is hosted on **GitHub Releases**:
+The ready-to-flash firmware archive is hosted on **GitHub Releases**:
 
-👉 **[Download Latest Firmware Image (.img)](https://github.com/anantkushwaha2002-ai/radxa-cubie-openwrt/releases/latest)**
+👉 **[Download OpenWrt 24.10 by Anant Kushwaha (.zip / 331 MB)](https://github.com/anantkushwaha2002-ai/radxa-cubie-openwrt/releases/download/v1.0.0/radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.zip)**
+
+*(Contains the uncompressed flashable `radxa_cubie_a5e_clean_openwrt_docker.img` file ~660 MB)*
 
 ---
 
@@ -103,3 +105,4 @@ If you want to customize this firmware, modify dashboard components, or recompil
 
 * **Firmware Customization & Build**: **Anant Kushwaha**
 * **Upstream**: [OpenWrt Project](https://openwrt.org/) & [Radxa](https://radxa.com/)
+
