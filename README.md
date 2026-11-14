@@ -3,12 +3,42 @@
 [![Firmware Version](https://img.shields.io/badge/OpenWrt-24.10.0-blue.svg)](https://openwrt.org/)
 [![Hardware](https://img.shields.io/badge/Hardware-Radxa%20Cubie%20A5E-orange.svg)](https://radxa.com/)
 [![Compatibility](https://img.shields.io/badge/RAM%20Variants-1GB%20%7C%202GB%20%7C%204GB-purple.svg)](https://radxa.com/)
-[![Maintainer](https://img.shields.io/badge/Maintainer-Anant%20Kushwaha-green.svg)](https://github.com/anantkushwaha2002-ai)
-[![License](https://img.shields.io/badge/License-GPL--2.0-yellow.svg)](LICENSE)
+[![Maintainer](https://img.shields.io/badge/Customization-Anant%20Kushwaha-green.svg)](https://github.com/anantkushwaha2002-ai)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-An optimized, clean, and fully localized OpenWrt 24.10 firmware build for the **Radxa Cubie A5E** (Allwinner sun55iw3 / A523 Octa-Core ARM64). Developed and maintained by **Anant Kushwaha**.
+An optimized, clean, and fully localized OpenWrt 24.10 firmware build for the **Radxa Cubie A5E** (Allwinner sun55iw3 / A523 Octa-Core ARM64). Customized and maintained by **Anant Kushwaha**.
 
 This release is a **100% clean, blank slate** with standard OpenWrt defaults, fixed wireless networking, and a customized real-time dashboard.
+
+---
+
+## 📋 Hardware Specifications
+
+<table>
+<tr>
+<td width="55%" valign="top">
+
+| Component | Specification |
+| :--- | :--- |
+| **Target Board** | Radxa Cubie A5E |
+| **Supported Variants** | 1GB, 2GB, and 4GB LPDDR4X |
+| **SoC** | Allwinner sun55iw3 / A523 (8x Cortex-A55 @ 1.8 GHz) |
+| **Architecture** | ARM64 (`aarch64_generic` / `armsr/armv8`) |
+| **Kernel** | Linux 5.15.147-cubieA5E |
+| **Wireless** | 2.4GHz & 5GHz Wi-Fi (Fixed & Verified) |
+| **Ethernet** | 2x Gigabit Ethernet (eth0 LAN / eth1 WAN) |
+| **Storage** | MicroSD Card Boot + High-Speed Storage (+1GB Swap) |
+
+</td>
+<td width="45%" align="center" valign="middle">
+
+<img src="images/size-view.webp" alt="Radxa Cubie A5E Board Overview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+<br />
+<em>Radxa Cubie A5E Single Board Computer</em>
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -37,51 +67,47 @@ This release is a **100% clean, blank slate** with standard OpenWrt defaults, fi
 
 ---
 
-## 📋 Hardware Specifications
+## 📥 Download Firmware & Flashing Tools
 
-| Component | Specification |
-| :--- | :--- |
-| **Target Board** | Radxa Cubie A5E |
-| **Supported Variants** | 1GB, 2GB, and 4GB LPDDR4X RAM models |
-| **SoC** | Allwinner sun55iw3 / A523 (8x Cortex-A55 @ 1.8 GHz) |
-| **Architecture** | ARM64 (`aarch64_generic` / `armsr/armv8`) |
-| **Kernel** | Linux 5.15.147-cubieA5E |
-| **Wireless** | 2.4GHz & 5GHz Wi-Fi (Fixed & Verified) |
-| **Ethernet** | 2x Gigabit Ethernet (eth0 LAN / eth1 WAN) |
-| **Storage** | MicroSD Card Boot + Storage Partition (+1GB Swap) |
+Everything needed to flash and run this firmware is available right here:
 
----
-
-## 📥 Download Firmware
-
-The ready-to-flash firmware image is available on **GitHub Releases**:
-
-👉 **[Download OpenWrt 24.10 by Anant Kushwaha (.zip / 331 MB)](https://github.com/anantkushwaha2002-ai/radxa-cubie-openwrt/releases/download/v1.0.0/radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.zip)**
-
-*(Extract the `.zip` archive to get the flashable `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img` file ~660 MB)*
+| Item | Description | Size | Download Link |
+| :--- | :--- | :--- | :--- |
+| **OpenWrt 24.10 Firmware (.zip)** | Ready-to-flash SD card image by Anant Kushwaha | ~331 MB | [📥 Download Firmware (.zip)](https://github.com/anantkushwaha2002-ai/radxa-cubie-openwrt/releases/download/v1.0.0/radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.zip) |
+| **PhoenixCard Tool (v4.3.1)** | Allwinner SD card burning tool for Windows | ~9.2 MB | [📥 Download PhoenixCard (v4.3.1)](https://github.com/anantkushwaha2002-ai/radxa-cubie-openwrt/releases/download/v1.0.0/PhoenixCard_V4.3.1.zip) *(or in [`tools/`](tools/PhoenixCard_V4.3.1.zip))* |
 
 ---
 
 ## 🛠️ Installation & Flashing Guide
 
-1. Download `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.zip` from the link above.
-2. Extract the archive to get `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img`.
-3. Insert a MicroSD card (Class 10 / A1 or A2 recommended, 8GB+).
-4. Flash the `.img` file using **Balena Etcher**, **Rufus**, or **PhoenixCard**.
-5. Insert the SD card into your **Radxa Cubie A5E** and power on the board.
-6. Connect your PC to the LAN Ethernet port.
+You can flash the image using **PhoenixCard** (recommended for Allwinner SBCs) or **Balena Etcher / Rufus**:
 
-### Default Access Credentials
-* **Router IP**: `192.168.10.1`
-* **Web UI (LuCI)**: `https://192.168.10.1/`
-* **SSH**: `ssh root@192.168.10.1`
-* **Default Password**: *None (No password by default; set your password upon first login)*
+### Method 1: Using PhoenixCard (Recommended for Allwinner)
+1. Download and extract **`PhoenixCard_V4.3.1.zip`**.
+2. Run `PhoenixCard.exe`.
+3. Select your MicroSD card drive from the dropdown list.
+4. Click **Image File** (镜像文件) and browse to the extracted `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img`.
+5. Under **Write Mode** (写入模式), select **Startup** (启动卡).
+6. Click **Burn** (烧录) and wait until the progress bar reaches 100% (Magic complete).
+
+### Method 2: Using Balena Etcher / Rufus
+1. Open Balena Etcher or Rufus.
+2. Select `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img`.
+3. Select your MicroSD card target and click **Flash**.
+
+### Booting Up:
+1. Insert the MicroSD card into your **Radxa Cubie A5E**.
+2. Connect power (5V Type-C) and connect your PC to the LAN Ethernet port.
+3. Access credentials:
+   * **Web UI (LuCI)**: `https://192.168.10.1/`
+   * **SSH**: `ssh root@192.168.10.1`
+   * **Default Password**: *None (No password by default; set your password upon first login)*
 
 ---
 
 ## 🔧 Building & Modifying from Source
 
-This repository contains all necessary scripts and tools so anyone can modify and rebuild the firmware:
+This repository contains all necessary scripts and tools so anyone can freely modify and rebuild the firmware:
 
 ### Prerequisites
 * Windows 10/11 or Linux
@@ -110,5 +136,6 @@ This repository contains all necessary scripts and tools so anyone can modify an
 
 ## 👤 Author & Credits
 
-* **Firmware Customization & Build**: **Anant Kushwaha**
-* **Upstream**: [OpenWrt Project](https://openwrt.org/) & [Radxa](https://radxa.com/)
+* **Firmware Customization, Optimization & Maintenance**: **Anant Kushwaha**
+* **Upstream Base**: [OpenWrt Project](https://openwrt.org/) & [Radxa](https://radxa.com/) & Kwrt Team
+* **License**: Released under the permissive **[MIT License](LICENSE)** — anyone is completely free to copy, modify, distribute, and adapt this work.
