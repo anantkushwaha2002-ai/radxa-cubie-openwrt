@@ -16,7 +16,7 @@ This release is a **100% clean, blank slate** with standard OpenWrt defaults, fi
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="52%" valign="top">
 
 | Component | Specification |
 | :--- | :--- |
@@ -30,11 +30,11 @@ This release is a **100% clean, blank slate** with standard OpenWrt defaults, fi
 | **Storage** | MicroSD Card Boot + High-Speed Storage (+1GB Swap) |
 
 </td>
-<td width="45%" align="center" valign="middle">
+<td width="48%" align="center" valign="middle">
 
-<img src="images/size-view.webp" alt="Radxa Cubie A5E Board Overview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+<img src="images/radxa_cubie_a5e_board.webp" alt="Radxa Cubie A5E Board Overview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
 <br />
-<em>Radxa Cubie A5E Single Board Computer</em>
+<em>Official Radxa Cubie A5E Single Board Computer</em>
 
 </td>
 </tr>
@@ -84,11 +84,11 @@ You can flash the image using **PhoenixCard** (recommended for Allwinner SBCs) o
 
 ### Method 1: Using PhoenixCard (Recommended for Allwinner)
 1. Download and extract **`PhoenixCard_V4.3.1.zip`**.
-2. Run `PhoenixCard.exe`.
-3. Select your MicroSD card drive from the dropdown list.
-4. Click **Image File** (镜像文件) and browse to the extracted `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img`.
-5. Under **Write Mode** (写入模式), select **Startup** (启动卡).
-6. Click **Burn** (烧录) and wait until the progress bar reaches 100% (Magic complete).
+2. Launch `PhoenixCard.exe`.
+3. Select your MicroSD card disk from the drive dropdown list.
+4. Click **Image File** and choose the extracted `radxa_cubie_a5e_openwrt_24.10_by_anant_kushwaha.img`.
+5. In **Write Mode**, choose **Startup**.
+6. Click **Burn** and wait until burning is complete.
 
 ### Method 2: Using Balena Etcher / Rufus
 1. Open Balena Etcher or Rufus.
