@@ -1,0 +1,17 @@
+# Giant binary and raw disk images (> 100MB cannot be in git)
+*.iso
+*.raw
+*.img
+*.sqfs
+*.bin
+*.tar.gz
+*.bak
+*.dump/rootfs.fex
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local system files
+Thumbs.db
+.DS_Store

@@ -1,0 +1,10 @@
+{
+	"admin/quickstart": {
+		"title": "Home",
+		"order": 1,
+		"action": {
+			"type": "template",
+			"path": "quickstart/home"
+		}
+	}
+}
